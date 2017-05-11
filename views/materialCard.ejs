@@ -1,0 +1,36 @@
+<!--Card-->
+<div class="card">
+
+   <!--Card image-->
+    <div class="view overlay hm-white-slight">
+        <img hidden src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%2842%29.jpg" class="img-fluid" alt="">
+        <a>
+            <div class="mask waves-effect waves-light"></div>
+        </a>
+    </div>
+    <!--/.Card image-->
+
+   <!--Button-->
+    <a hidden class="btn-floating btn-action"><i class="fa fa-chevron-right"></i></a>
+
+   <!--Card content-->
+    <div class="card-block">
+        <!--Title-->
+        <h4 class="card-title"><%= message._id %></h4>
+        <hr>
+        <!--Text-->
+        <p class="card-text"><%= message.message %></p>
+    </div>
+    <!--/.Card content-->
+
+   <!-- Card footer -->
+    <div class="card-data">
+        <ul>
+            <li><i class="fa fa-clock-o"></i> <%= message.date %></li>
+            <li><a href="#"><i class="fa fa-comments-o"></i>12</a></li>
+        </ul>
+    </div>
+    <!-- Card footer -->
+
+</div>
+<!--/.Card-->

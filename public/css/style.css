@@ -1,0 +1,21 @@
+body {
+	background-image: url('../images/gridtalk-and-background.jpg');
+	background-repeat:no-repeat;
+  	background-size:cover;
+}
+
+h1, label, .bottom-links{
+	color: white;
+}
+
+.messageBoardStyle{
+	color: white;
+}
+
+.postStyle{
+	border-radius: 7px;
+    background: #73AD21;
+    padding: 20px; 
+    width: 300px;
+    height: auto;
+}
