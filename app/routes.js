@@ -71,7 +71,7 @@ module.exports = function(app, passport) {
     // =====================================
     // process the login form
     app.post('/login', passport.authenticate('local-login', {
-        successRedirect : '/profile', // redirect to the secure profile section
+        successRedirect : '/messages', // redirect to the messageboard
         failureRedirect : '/login', // redirect back to the signup page if there is an error
         failureFlash : true // allow flash messages
     }));
@@ -85,7 +85,7 @@ module.exports = function(app, passport) {
     // MESSAGE BOARD =======================
     // =====================================
     // show the message board
-    app.get('/messages', function(req, res) {
+    app.get('/messages', isLoggedIn,function(req, res) {
         // render the page and pass in any flash data if it exists
         getMessages().then((messages)=>{
             res.render('board.ejs', {messages: messages});
