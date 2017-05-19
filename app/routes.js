@@ -103,7 +103,8 @@ module.exports = function(app, passport) {
     app.post('/messages', isLoggedIn, function(req, res, next){
         console.log('hello world');
         console.log(req.body);
-        var message = new Message({userID: "021", message: req.body.message, date: new Date()});
+        console.log(req.user._id);
+        var message = new Message({userID: req.user._id, message: req.body.message, date: new Date()});
             // message.message = req.params.message;
             console.log(message);
             // message.date = new Date();
@@ -122,18 +123,48 @@ module.exports = function(app, passport) {
         res.redirect('/login');
     }
 
-};
+
+    // =====================================
+    // FACEBOOK ROUTES =====================
+    // =====================================
+    // route for facebook authentication and login
+    app.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
+
+    // handle the callback after facebook has authenticated the user
+    app.get('/auth/facebook/callback',
+        passport.authenticate('facebook', {
+            successRedirect : '/profile',
+            failureRedirect : '/'
+        }));
+
+    // route for logging out
+    app.get('/logout', function(req, res) {
+        req.logout();
+        res.redirect('/');
+    });
+
+
+
+}; // end module.exports (app, passport)
 
 function getMessages(query){
     return new Promise(function(resolve, reject){
        Message
         .find(query)
+        .populate("userID")
         .exec((err, messages) => {
+            console.log(messages);
             if(err) reject(err);
             resolve (messages);
         }) 
     });
 }
+
+
+
+
+
+
 
 // route middleware to make sure a user is logged in
 function isLoggedIn(req, res, next) {

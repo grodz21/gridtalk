@@ -16,7 +16,15 @@
    <!--Card content-->
     <div class="card-block">
         <!--Title-->
-        <h4 class="card-title"><%= message._id %></h4>
+        <h4 class="card-title">
+            <% if (message.userID.local.username) { %>
+                <%= message.userID.local.username %>
+            <% } else { %>
+                <%= message.userID.facebook.name %>
+            <% } %>            
+                
+
+        </h4>
         <hr>
         <!--Text-->
         <p class="card-text"><%= message.message %></p>

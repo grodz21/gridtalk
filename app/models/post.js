@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 // define the schema for our post model
 var messageSchema = mongoose.Schema({
 	
-        userId		: {type:String, required: false},
+        userID		: {type:String, required: true, ref: "User"},
         message     : {type:String, required: true},
         date     	: {type:Date, default: Date.now}
     
