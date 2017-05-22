@@ -1,10 +1,10 @@
 # Gridtalk
 
-Gridtalk is a message board / forum capstone project. Emphasizing server side programming for the backend course.
+Gridtalk is a message board / forum capstone project. Emphasizing server side programming for Thinkful's backend course.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+All needed files are included in the package.json.  Fork this project, download it to your machine and run npm install. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
