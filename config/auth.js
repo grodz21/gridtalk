@@ -4,7 +4,7 @@ module.exports = {
     'facebookAuth' : {
         'clientID'      : '805473379619895', // your App ID
         'clientSecret'  : '0bf2924b9a8a1b15e3ad7a4363c96d43', // your App Secret
-        'callbackURL'   : 'https://gridtalk.herokuapp.com/auth/facebook/${senderId}/?pageId=${pageId}'
+        'callbackURL'   : 'https://gridtalk.herokuapp.com/auth/facebook/callback'
 
     }
 
