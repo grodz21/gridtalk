@@ -136,6 +136,10 @@ module.exports = function(app, passport) {
             successRedirect : '/profile',
             failureRedirect : '/'
         }));
+    // =====================================
+    // FACEBOOK ROUTES END =================
+    // =====================================
+
 
     // route for logging out
     app.get('/logout', function(req, res) {
