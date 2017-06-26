@@ -1,26 +1,69 @@
-body{
-	background-image: url('../images/gridtalk-and-background.jpg');
-	background-repeat:no-repeat;
-  	background-size:cover;
+/****************************************************************/
+
+/* Styling for desktop screens */
+@media only screen and (min-width: 769px) {
+	body {
+		background-image: url('../images/gridtalk-and-background.jpg');
+		background-repeat:no-repeat;
+	  	background-size:cover;
+	}
+
+
+	h1, label, .bottom-links{
+		color: white;
+	}
+
+	.messageBoardStyle{
+		color: white;
+	}
+
+	.postStyle{
+		border-radius: 7px;
+	    background: #73AD21;
+	    padding: 20px; 
+	    width: 300px;
+	    height: auto;
+	}
+
+	#postWrapper{
+		display: flex;
+		flex-direction: row;
+	}
+
+	#logoContainer {
+  		display: none;
+  	}
 }
 
-h1, label, .bottom-links{
-	color: white;
-}
+/*************************************************/
 
-.messageBoardStyle{
-	color: white;
-}
 
-.postStyle{
-	border-radius: 7px;
-    background: #73AD21;
-    padding: 20px; 
-    width: 300px;
-    height: auto;
-}
+/* Styling changes for mobile phone screens */
+@media only screen and (max-width : 768px) {
+	.board-bg > body {
+    	background-image: url('../images/mobile-art/bg-mobile-board.jpg');
+    	background-attachment: scroll;
+		background-position: center center;
+		padding-top:20px;
+  	}
 
-#postWrapper{
-	display: flex;
-	flex-direction: row;
+  	#logoContainer {
+  		display: flex;
+  		justify-content: center;
+  	}
+
+  	.card-block {
+	  padding: 1.25rem;
+	  background-color: white;
+	}
+
+	hr {
+		border-color: white;
+	}
+
+	.postCardWrapper {
+		justify-content: center;
+	}
+
 }
+/*******************************************

@@ -1,0 +1,7 @@
+/* Styling changes for mobile phone screens */
+@media only screen and (max-width : 768px) {
+	 body {
+		background-image: url('../images/mobile-art/bg-mobile-board.jpg');
+
+	}
+}

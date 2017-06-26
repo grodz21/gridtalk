@@ -1,6 +1,6 @@
 <!-- views/login.ejs -->
 <!doctype html>
-<html>
+<html class="board-bg">
 <head>
     <title>GRIDTALK</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
@@ -14,12 +14,16 @@
         body        { background-size: 100%; background-attachment: fixed; background-color: black;}
     </style>
 </head>
-<body class="messageBoardStyle" >
-<div class="container">
+<body class="messageBoardStyle">
+<div class="container" id="logoContainer">
+    <div class="row" class="col-sm-12" class="logoMobile">
+        <img src="/images/mobile-art/logoWhite.png" style="height: 350px;" />
+    </div>
+</div>
 
+<div class="container">
     <div class="col-sm-4 col-sm-offset-3" style="width: 600px;">
         <form action="/messages" method="POST" style="display: inline-block;">
-          <!-- <label for="message">Message</label> -->
           <input type="text" name="message" id="message" placeholder="Message" style="
             height: 30px;margin-top: 10px;">          
           <button type="submit" class="btn btn-success">
@@ -45,9 +49,9 @@
     </div>
 
     <div class="col-sm-12" id="postWrapper">
-        <div style="display: flex; flex-wrap: wrap;">
+        <div style="display: flex; flex-wrap: wrap;" class="postCardWrapper">
             <% messages.forEach(function(message){ %>
-            <%- include materialCard.ejs %> <% });%>
+            <% include materialCard.ejs %> <% });%>
         </div>
     </div>
 
