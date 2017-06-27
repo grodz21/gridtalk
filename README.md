@@ -9,29 +9,18 @@ All needed files are included in the package.json.  Fork this project, download 
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+What things you need to install the software.
 
 ```
-Give examples
+Need to have installed NPM into local machine to be able to run all commands needed for installation and running of the project.
 ```
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
 
 ```
-Give the example
+After copying project to local machine, cd into project folder and run NPM INSTALL.
 ```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Deployment
 
