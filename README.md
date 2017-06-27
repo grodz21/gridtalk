@@ -1,6 +1,7 @@
 # Gridtalk
 
 Gridtalk is a message board / forum capstone project. Emphasizing server side programming for Thinkful's backend course.
+Working project can be foun in (www.gridtalk.herokuapp.com)
 
 ## Getting Started
 
